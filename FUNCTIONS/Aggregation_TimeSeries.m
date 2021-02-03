@@ -48,16 +48,16 @@ elseif strcmp(NameFun,'Máximo')
 end
 
 %%
-if strcmp(Resolution,'Monthly') || strcmp(Resolution,'Years')
+if strcmp(Resolution,'Mensual') || strcmp(Resolution,'Anual')
     
-    if strcmp(Resolution,'Monthly')
+    if strcmp(Resolution,'Mensual')
         Table_i = table(Results.Date, Results.Data, year(Results.Date), month(Results.Date), day(Results.Date),...
         'VariableNames',{'Date','Value','Y','M','D'});
 
         Tmp     = table2array(varfun(MyFun,Table_i,'GroupingVariables',{'Y','M'},'InputVariable','Value'));
         Date    = datetime(Tmp(:,1), Tmp(:,2), Tmp(:,1)*0 + 1, Tmp(:,1)*0, Tmp(:,1)*0, Tmp(:,1)*0);
         Data    = Tmp(:,4:end);
-    elseif strcmp(Resolution,'Years')
+    elseif strcmp(Resolution,'Anual')
         Table_i = table(Results.Date, Results.Data, year(Results.Date), month(Results.Date), day(Results.Date),...
         'VariableNames',{'Date','Value','Y','M','D'});
 

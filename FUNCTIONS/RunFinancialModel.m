@@ -315,7 +315,4 @@ for i = 1:length(CodePython)
 end
 fclose(ID_File);
 
-system(['python "',fullfile(PathProject,'salidas', NameSce, NameExe,'series','Energy.py'),'"'], '-echo')
-
-
-
+system(['conda activate base & python "',fullfile(PathProject,'salidas', NameSce, NameExe,'series','Energy.py'),'"'], '-echo')
