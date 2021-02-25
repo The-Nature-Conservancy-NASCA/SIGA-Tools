@@ -41,10 +41,10 @@ if strcmp(NameFun,'Promedio')
     MyFun = @(x) mean(x,'omitnan');
 elseif strcmp(NameFun,'Suma')
     MyFun = @(x) sum(x,'omitnan');
-elseif strcmp(NameFun,'Mininimo')
-    MyFun = @(x) min(x,'omitnan');
+elseif strcmp(NameFun,'Mínimo')
+    MyFun = @(x) min(x);
 elseif strcmp(NameFun,'Máximo')
-    MyFun = @(x) max(x,'omitnan');
+    MyFun = @(x) max(x);
 end
 
 %%

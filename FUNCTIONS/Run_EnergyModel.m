@@ -1,4 +1,4 @@
-function RunFinancialModel(PathProject, NameSce, NameExe, NameBasin)
+function Run_EnergyModel(PathProject, NameSce, NameExe, NameBasin)
 
 if strcmp(NameBasin,'Chivor')
     Params.AreaEmbalse = '12057300'; %m2
