@@ -1,4 +1,4 @@
-function Run_EnergyModel(PathProject, NameSce, NameExe, NameBasin)
+function [status,TextError] = Run_EnergyModel(PathProject, NameSce, NameExe, NameBasin)
 
 if strcmp(NameBasin,'Chivor')
     Params.AreaEmbalse = '12057300'; %m2
@@ -315,4 +315,4 @@ for i = 1:length(CodePython)
 end
 fclose(ID_File);
 
-system(['conda activate base & python "',fullfile(PathProject,'salidas', NameSce, NameExe,'series','Energy.py'),'"'], '-echo')
+[status,TextError] = system(['conda activate base & python "',fullfile(PathProject,'salidas', NameSce, NameExe,'series','Energy.py'),'"'], '-echo');
